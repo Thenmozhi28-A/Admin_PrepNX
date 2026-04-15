@@ -13,7 +13,6 @@ import {
 } from '@mui/material';
 import {
   Mail,
-  MapPin,
   ShieldCheck,
   Eye,
   EyeOff,

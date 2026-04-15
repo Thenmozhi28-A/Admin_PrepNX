@@ -27,7 +27,6 @@ import {
   X,
   UserPlus,
   UploadCloud,
-  Download,
   Info,
   ChevronDown,
 } from 'lucide-react';
@@ -56,7 +55,7 @@ import { toast } from 'react-toastify';
 const Users: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
-  const { data: usersData, isLoading, refetch } = useGetUsersQuery({ page: currentPage, size: 10 }, { refetchOnMountOrArgChange: true });
+  const { data: usersData, refetch } = useGetUsersQuery({ page: currentPage, size: 10 }, { refetchOnMountOrArgChange: true });
   const onlineUsers = useSelector((state: RootState) => state.onlineStatus.onlineUsers);
   const [addUser, { isLoading: isAddingUser }] = useAddUserMutation();
   const [updateUser, { isLoading: isUpdatingUser }] = useUpdateUserMutation();

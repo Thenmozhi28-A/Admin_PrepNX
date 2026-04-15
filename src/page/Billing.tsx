@@ -8,7 +8,6 @@ import {
   LinearProgress,
   IconButton,
   Dialog,
-  Switch,
   Table,
   TableBody,
   TableCell,
