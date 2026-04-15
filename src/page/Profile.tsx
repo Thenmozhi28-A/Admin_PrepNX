@@ -8,8 +8,6 @@ import {
   Switch,
   Grid,
   Paper,
-  useTheme,
-  useMediaQuery,
 } from '@mui/material';
 import {
   Mail,
@@ -29,8 +27,6 @@ import type { ProfileFormData } from '../types/Types';
 
 const Profile: React.FC = () => {
   const [isEditing, setIsEditing] = useState(false);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const { data: profileResponse, isLoading: isProfileLoading } = useGetProfileQuery(undefined, {
     refetchOnMountOrArgChange: true
@@ -121,9 +117,7 @@ const Profile: React.FC = () => {
     }
   };
 
-  const handleGlobalSubmit = () => {
-    // This is no longer used, as we have separate buttons
-  };
+
 
   if (isProfileLoading) {
     return <Box sx={{ p: 4 }}>Loading profile...</Box>;
